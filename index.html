@@ -3,143 +3,521 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Job Rabera | Portfolio</title>
-<link rel="stylesheet" href="style.css">
+<title>Job Rabera | Official Portfolio – ICT Student & Web Developer in Kisii, Kenya</title>
+<meta name="description" content="Job Rabera is an ICT student and aspiring software developer in Kisii, Kenya, building modern websites, Android applications and practical digital solutions.">
+<meta name="keywords" content="Job Rabera, ICT student, web developer, Android developer, software developer, Kisii, Kenya, portfolio, HTML, CSS, JavaScript, Java">
+<meta name="author" content="Job Rabera">
+<meta name="theme-color" content="#07110d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Job Rabera | Official Portfolio">
+<meta property="og:description" content="ICT student and aspiring software developer in Kisii, Kenya. Websites, Android apps and practical digital solutions.">
+<meta property="og:image" content="profile.jpg">
+<meta name="twitter:card" content="summary">
+<style>
+:root{
+  --bg:#07110d;--bg2:#0c1b14;--card:rgba(255,255,255,.04);--line:rgba(255,255,255,.09);
+  --em:#10b981;--em-d:#065f46;--gold:#d4af37;--txt:#eef3f0;--mut:#9fb0a7;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --nav:68px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav)}
+body{font-family:var(--sans);background:var(--bg);color:var(--txt);line-height:1.65;overflow-x:hidden;
+  background-image:radial-gradient(900px 500px at 85% -5%,rgba(16,185,129,.16),transparent 60%),radial-gradient(700px 500px at -10% 40%,rgba(212,175,55,.06),transparent 60%)}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:96px 0}
+.sec-head{margin-bottom:48px;max-width:640px}
+.sec-head h2{font-family:var(--serif);font-size:clamp(2rem,4.5vw,3rem);line-height:1.15;font-weight:600}
+.sec-head p{color:var(--mut);margin-top:12px}
+.sec-head::after{content:"";display:block;width:56px;height:3px;background:linear-gradient(90deg,var(--gold),var(--em));margin-top:18px;border-radius:2px}
+.ico{width:1.25em;height:1.25em;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.glass{background:var(--card);border:1px solid var(--line);border-radius:18px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+
+/* NAV */
+header{position:fixed;inset:0 0 auto 0;z-index:50;height:var(--nav);background:rgba(7,17,13,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:100%}
+.brand{font-family:var(--serif);font-weight:700;letter-spacing:.14em;font-size:1.15rem}
+.brand span{color:var(--gold)}
+.menu{display:flex;gap:6px}
+.menu a{position:relative;padding:8px 14px;color:var(--mut);font-size:.95rem;transition:color .25s}
+.menu a::after{content:"";position:absolute;left:14px;right:14px;bottom:2px;height:2px;background:var(--em);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.menu a:hover,.menu a.active{color:var(--txt)}
+.menu a:hover::after,.menu a.active::after{transform:scaleX(1)}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--txt);width:44px;height:44px;border-radius:10px;cursor:pointer;align-items:center;justify-content:center}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:999px;font-weight:600;font-size:.95rem;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:linear-gradient(135deg,var(--em),var(--em-d));color:#fff;box-shadow:0 8px 24px rgba(16,185,129,.25)}
+.btn-p:hover{box-shadow:0 12px 30px rgba(16,185,129,.4)}
+.btn-o{border-color:var(--gold);color:var(--gold);background:transparent}
+.btn-o:hover{background:rgba(212,175,55,.1)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:calc(var(--nav) + 40px) 0 60px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid rgba(16,185,129,.4);background:rgba(16,185,129,.08);border-radius:999px;font-size:.85rem;color:#a7f3d0}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--em);box-shadow:0 0 0 0 rgba(16,185,129,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(16,185,129,0)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}
+.hello{color:var(--gold);margin:26px 0 4px;font-size:1.1rem}
+h1{font-family:var(--serif);font-size:clamp(3rem,8vw,5.6rem);line-height:1;letter-spacing:.02em;font-weight:700;background:linear-gradient(120deg,#fff 30%,#6ee7b7 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.roles{margin:16px 0;font-size:clamp(.85rem,2vw,1rem);letter-spacing:.12em;color:var(--mut);font-weight:600}
+.typed{color:var(--gold);min-height:1.7em;font-size:1.2rem;font-family:var(--serif)}
+.typed::after{content:"|";margin-left:2px;animation:blink 1s steps(1) infinite;color:var(--em)}
+@keyframes blink{50%{opacity:0}}
+.intro{color:var(--mut);max-width:540px;margin:18px 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px}
+.socials{display:flex;flex-wrap:wrap;gap:10px}
+.socials a{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line);background:var(--card);color:var(--mut);transition:all .25s}
+.socials a:hover{color:var(--gold);border-color:var(--gold);transform:translateY(-3px)}
+.portrait{position:relative;width:min(380px,100%);margin-inline:auto;aspect-ratio:4/5}
+.portrait::before{content:"";position:absolute;inset:-14px;border-radius:32px;border:1px solid rgba(212,175,55,.45);transform:rotate(4deg)}
+.portrait::after{content:"";position:absolute;inset:0;border-radius:28px;background:linear-gradient(160deg,var(--em-d),transparent 60%);z-index:-1;transform:translate(16px,16px)}
+.portrait .frame{position:relative;width:100%;height:100%;border-radius:28px;overflow:hidden;background:var(--bg2);border:1px solid var(--line);display:grid;place-items:center}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.portrait .initials{position:absolute;font-family:var(--serif);font-size:5rem;color:var(--em);z-index:0}
+.portrait img{position:relative;z-index:1}
+.code-chip{position:absolute;z-index:2;padding:9px 14px;border-radius:12px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8rem;background:rgba(7,17,13,.85);border:1px solid var(--line);color:#6ee7b7;animation:float 6s ease-in-out infinite}
+.c1{top:8%;left:-8%}.c2{bottom:12%;right:-6%;color:var(--gold);animation-delay:-3s}
+@keyframes float{50%{transform:translateY(-10px)}}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.about-grid p{color:var(--mut);margin-bottom:16px;max-width:62ch}
+.about-grid p strong{color:var(--txt)}
+.info{display:grid;gap:14px}
+.info-card{padding:20px 22px;display:flex;gap:16px;align-items:flex-start;transition:border-color .3s}
+.info-card:hover{border-color:rgba(16,185,129,.5)}
+.info-card .ico{color:var(--gold);width:26px;height:26px;margin-top:2px}
+.info-card h3{font-size:.8rem;color:var(--mut);font-weight:500}
+.info-card p{color:var(--txt);margin:2px 0 0;font-size:1rem}
+
+/* SKILLS */
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.skill-card{padding:26px}
+.skill-card h3{display:flex;align-items:center;gap:12px;font-size:1.1rem;margin-bottom:20px}
+.skill-card h3 .ico{color:var(--em);width:26px;height:26px}
+.sk{margin-bottom:16px}
+.sk-top{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:6px}
+.sk-top span:last-child{color:var(--mut);font-size:.8rem}
+.bar{height:6px;border-radius:6px;background:rgba(255,255,255,.08);overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,var(--em-d),var(--em),var(--gold));transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.note{margin-top:28px;color:var(--mut);font-size:.88rem}
+
+/* SERVICES */
+.svc{padding:28px;transition:transform .3s,border-color .3s}
+.svc:hover{transform:translateY(-6px);border-color:rgba(212,175,55,.5)}
+.svc .ico-b{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:rgba(16,185,129,.12);color:var(--em);margin-bottom:18px}
+.svc .ico-b .ico{width:26px;height:26px}
+.svc h3{margin-bottom:10px;font-size:1.1rem}
+.svc li{color:var(--mut);font-size:.92rem;padding-left:18px;position:relative;margin-top:6px}
+.svc li::before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+
+/* PROJECTS */
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:22px}
+.proj{overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,border-color .3s}
+.proj:hover{transform:translateY(-6px);border-color:rgba(16,185,129,.5)}
+.proj-vis{height:150px;display:grid;place-items:center;background:linear-gradient(135deg,var(--em-d),#04130c);color:var(--gold);position:relative}
+.proj-vis .ico{width:56px;height:56px;stroke-width:1.4}
+.proj-vis::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 0,rgba(212,175,55,.2),transparent 50%)}
+.proj-body{padding:24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.proj-body h3{font-family:var(--serif);font-size:1.3rem}
+.proj-body p{color:var(--mut);font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.tags span{font-size:.75rem;padding:4px 11px;border-radius:999px;background:rgba(16,185,129,.1);color:#a7f3d0;border:1px solid rgba(16,185,129,.25)}
+.proj .btn{align-self:flex-start;padding:9px 18px;font-size:.85rem}
+
+/* EDUCATION */
+.timeline{position:relative;max-width:760px;padding-left:34px}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--em),transparent)}
+.tl{position:relative;padding:22px 26px;margin-bottom:20px}
+.tl::before{content:"";position:absolute;left:-34px;top:28px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--gold)}
+.tl h3{font-size:1.1rem;margin-bottom:6px}
+.tl p{color:var(--mut);font-size:.95rem}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:32px}
+.c-list{padding:28px;display:grid;gap:22px;align-content:start}
+.c-item{display:flex;gap:16px;align-items:center}
+.c-item .ico{color:var(--gold);width:24px;height:24px}
+.c-item small{display:block;color:var(--mut);font-size:.8rem}
+.c-item a:hover{color:var(--em)}
+form{padding:28px;display:grid;gap:18px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:.85rem;margin-bottom:6px;color:var(--mut)}
+input,textarea{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.3);color:var(--txt);font:inherit;transition:border-color .25s,box-shadow .25s}
+textarea{min-height:130px;resize:vertical}
+input:focus,textarea:focus{outline:none;border-color:var(--em);box-shadow:0 0 0 3px rgba(16,185,129,.2)}
+.invalid{border-color:#f87171!important}
+.err{color:#fca5a5;font-size:.8rem;min-height:1.1em;margin-top:4px;display:block}
+.f-btns{display:flex;flex-wrap:wrap;gap:12px}
+.status{padding:12px 16px;border-radius:12px;font-size:.9rem;display:none}
+.status.ok{display:block;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.4);color:#a7f3d0}
+.status.bad{display:block;background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.4);color:#fca5a5}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:56px 0 28px;background:rgba(0,0,0,.25)}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+footer p{color:var(--mut);font-size:.92rem;margin-top:12px;max-width:36ch}
+footer h4{font-size:.95rem;margin-bottom:14px;color:var(--gold)}
+footer li{margin-bottom:8px}
+footer li a{color:var(--mut);font-size:.92rem}
+footer li a:hover{color:var(--em)}
+.copy{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--mut);font-size:.85rem}
+.top{position:fixed;right:20px;bottom:20px;width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);background:rgba(7,17,13,.85);color:var(--gold);cursor:pointer;display:grid;place-items:center;opacity:0;pointer-events:none;transform:translateY(10px);transition:all .3s;z-index:40}
+.top.show{opacity:1;pointer-events:auto;transform:none}
+.top:hover{background:var(--gold);color:var(--bg)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  section{padding:72px 0}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-grid{gap:48px}
+  .portrait{width:min(300px,80%)}
+  .f-grid{grid-template-columns:1fr 1fr}.f-grid>div:first-child{grid-column:1/-1}
+}
+@media(max-width:760px){
+  .burger{display:flex}
+  .menu{position:absolute;top:var(--nav);left:0;right:0;flex-direction:column;gap:0;padding:12px 1.25rem 20px;background:rgba(7,17,13,.97);border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;pointer-events:none;transition:all .3s}
+  .menu.open{transform:none;opacity:1;pointer-events:auto}
+  .menu a{padding:14px 4px;border-bottom:1px solid var(--line)}
+  .menu a::after{display:none}
+  .menu a.active{color:var(--gold)}
+}
+@media(max-width:520px){
+  .f-row,.f-grid{grid-template-columns:1fr}
+  .c1{left:0}.c2{right:0}
+  .btn{width:100%;justify-content:center}
+  .copy{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
 </head>
 <body>
 
-<!-- MENU -->
-<nav>
-  <div class="logo">JOB <span>RABERA</span></div>
-  <div class="links">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <button id="menuBtn">☰</button>
-</nav>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 8 19.6L3 21z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.400-2.400-2.400l.8-1-1-2L9 8.500z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r=".6"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24"><path d="M14 3v11.500a3.500 3.500 0 1 1-3.500-3.500M14 3c.3 2.500 2 4.500 5 4.800"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3V9z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/></symbol>
+  <symbol id="i-ph" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-ml" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.500h.01M10 6.500h.01"/></symbol>
+  <symbol id="i-and" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.700 3.600 3 8 3s8-1.300 8-3V5M4 12c0 1.700 3.600 3 8 3s8-1.300 8-3"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.500 6.500a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8M3 21l4-4"/></symbol>
+  <symbol id="i-ui" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></symbol>
+  <symbol id="i-shape" viewBox="0 0 24 24"><path d="M12 3l8 14H4L12 3z"/><circle cx="17" cy="18" r="4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.700 5.600 6.100.9-4.400 4.300 1 6.100L12 17l-5.400 2.900 1-6.100L3.200 9.500l6.100-.9L12 3z"/></symbol>
+  <symbol id="i-grad" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9zM6 11.500V16c0 1.500 2.700 3 6 3s6-1.500 6-3v-4.500"/></symbol>
+  <symbol id="i-tgt" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+</svg>
 
-<!-- HOME -->
+<header>
+  <nav class="wrap nav" aria-label="Main navigation">
+    <a href="#home" class="brand">JOB <span>RABERA</span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg class="ico"><use href="#i-menu"/></svg></button>
+    <div class="menu" id="menu">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
 <section id="home" class="hero">
-  <div class="hero-text">
-    <p class="hello">Hello, I'm</p>
-    <h1>Job Rabera</h1>
-    <h2>ICT Student & Web Developer</h2>
-    <p class="desc">I build clean, modern websites and Android apps. I turn ideas into working systems - like student grade systems, shop feedback apps and business websites.</p>
-    <div class="btns">
-      <a href="#projects" class="btn-green">View My Work</a>
-      <a href="#contact" class="btn-white">Hire Me</a>
-    </div>
-    <div class="socials">
-      <a href="https://wa.me/254703839993" target="_blank">WhatsApp</a> •
-      <a href="https://www.instagram.com/kimme4622?obrf=aDB3OGtncmh4dmpi&utm_source=qr" target="_blank">Instagram</a> •
-      <a href="https://github.com/raberajob02-stack" target="_blank">GitHub</a>
-    </div>
-  </div>
-
-  <div class="hero-img">
-    <img src="profile.jpg" alt="Job Rabera" class="profile-pic">
-    <p class="available">● Available for Attachment / Freelance</p>
-
-    <!-- ALL SOCIALS -->
-    <div class="social-box">
-      <h3>Follow Me</h3>
-      <a href="https://wa.me/254703839993" target="_blank" class="social whatsapp">📱 WhatsApp</a>
-      <a href="https://www.instagram.com/kimme4622?obrf=aDB3OGtncmh4dmpi&utm_source=qr" target="_blank" class="social insta">📸 Instagram</a>
-      <a href="https://www.tiktok.com/@kimme0602?_r=1&_t=ZS-9BJZyIDuOHw" target="_blank" class="social tiktok">🎵 TikTok</a>
-      <a href="https://www.facebook.com/share/18dB2dWQU7/?mibextid=wwXIfr" target="_blank" class="social fb">👍 Facebook</a>
-      <a href="https://github.com/raberajob02-stack" target="_blank" class="social github">💻 GitHub</a>
-      <a href="https://youtube.com/@rabera-uw5th?si=4oF0HaVMJcuxBZtB" target="_blank" class="social youtube">▶️ YouTube</a>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <h2 class="title">About Me</h2>
-  <div class="about-box">
-    <p>I am <b>Job Rabera</b>, an ICT student based in Kisii, Kenya. I love technology and solving real problems with code.</p>
-    <p>I have experience in <b>HTML, CSS, JavaScript, Java (Android) and Databases</b>. My goal is to become a full-stack developer and help businesses in Kenya go online.</p>
-    <div class="stats">
-      <div><h3>10+</h3><p>Projects Done</p></div>
-      <div><h3>5+</h3><p>Technologies</p></div>
-      <div><h3>100%</h3><p>Commitment</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <h2 class="title">My Skills</h2>
-  <div class="grid">
-    <div class="card"><h3>🌐 Web Development</h3><p>HTML, CSS, JavaScript - Responsive websites</p><div class="bar"><div style="width:90%">90%</div></div></div>
-    <div class="card"><h3>📱 Android Apps</h3><p>Java, Android Studio - Feedback & Shop Apps</p><div class="bar"><div style="width:80%">80%</div></div></div>
-    <div class="card"><h3>🗄️ Databases</h3><p>MySQL, Firebase - Store & Manage Data</p><div class="bar"><div style="width:75%">75%</div></div></div>
-    <div class="card"><h3>🎨 UI Design</h3><p>Canva, Figma - Clean & Modern Designs</p><div class="bar"><div style="width:85%">85%</div></div></div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <h2 class="title">My Projects</h2>
-  <div class="grid">
-    <div class="card project">
-      <h3>1. Student Mean Grade System</h3>
-      <p>JavaScript system that calculates sum, average & grade (A-E) with validation.</p>
-      <span class="tag">JavaScript</span> <span class="tag">HTML</span>
-    </div>
-    <div class="card project">
-      <h3>2. Shape Calculator</h3>
-      <p>Calculates area of Triangle, Rectangle, Circle & Square using functions.</p>
-      <span class="tag">JavaScript</span>
-    </div>
-    <div class="card project">
-      <h3>3. Customer Feedback App</h3>
-      <p>Android app for shops to collect customer feedback with rating stars.</p>
-      <span class="tag">Android</span> <span class="tag">Java</span>
-    </div>
-    <div class="card project">
-      <h3>4. My Portfolio Website</h3>
-      <p>This website! Built with HTML, CSS & JavaScript. Fully responsive.</p>
-      <span class="tag">Portfolio</span>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2 class="title">Contact Me</h2>
-  <div class="contact-box">
+  <div class="wrap hero-grid">
     <div>
-      <p><b>📍 Location:</b> Kisii, Kenya</p>
-      <p><b>📞 Phone:</b> +254 703839993</p>
-      <p><b>📧 Email:</b>raberajob02@gmail.com</p>
-      <p>Let's work together! Send me a message:</p>
-      <p><b>Follow me on all platforms →</b><br>Check my social buttons at the top!</p>
+      <span class="badge"><i class="dot"></i>Available for attachment and freelance opportunities</span>
+      <p class="hello">Hello, I'm</p>
+      <h1>JOB RABERA</h1>
+      <p class="roles">ICT STUDENT | SOFTWARE DEVELOPER | WEB DEVELOPER</p>
+      <p class="typed" id="typed" aria-live="off"></p>
+      <p class="intro">I am a passionate ICT student and aspiring software developer based in Kisii, Kenya. I enjoy building modern websites, Android applications and practical digital solutions that solve real-world problems.</p>
+      <div class="cta">
+        <a href="#projects" class="btn btn-p">Explore My Work</a>
+        <a href="#contact" class="btn btn-o">Let's Work Together</a>
+      </div>
+      <div class="socials" aria-label="Social media">
+        <a href="https://wa.me/254703839993" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a>
+        <a href="https://www.instagram.com/kimme4622?obrf=aDB3OGtncmh4dmpi&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="ico"><use href="#i-ig"/></svg></a>
+        <a href="https://github.com/raberajob02-stack" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="ico"><use href="#i-gh"/></svg></a>
+        <a href="https://www.tiktok.com/@kimme0602?_r=1&_t=ZS-9BJZyIDuOHw" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg class="ico"><use href="#i-tt"/></svg></a>
+        <a href="https://www.facebook.com/share/18dB2dWQU7/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="ico"><use href="#i-fb"/></svg></a>
+        <a href="https://youtube.com/@rabera-uw5th?si=4oF0HaVMJcuxBZtB" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="ico"><use href="#i-yt"/></svg></a>
+      </div>
     </div>
-    <form onsubmit="sendMessage(event)">
-      <input type="text" id="cName" placeholder="Your Name" required>
-      <input type="text" id="cMsg" placeholder="Your Message - e.g. I want a website" required>
-      <button type="submit">SEND MESSAGE</button>
-      <p id="sentMsg"></p>
-    </form>
+    <div class="portrait">
+      <span class="code-chip c1">&lt;html lang="en"&gt;</span>
+      <span class="code-chip c2">const goal = "build";</span>
+      <div class="frame">
+        <span class="initials" aria-hidden="true">JR</span>
+        <img src="profile.jpg" alt="Portrait of Job Rabera, ICT student and web developer from Kisii, Kenya" width="380" height="475" onerror="this.style.display='none'">
+      </div>
+    </div>
   </div>
 </section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>About me</h2></div>
+    <div class="about-grid">
+      <div class="rv">
+        <p>I am <strong>Job Rabera</strong>, an enthusiastic ICT student with a strong interest in software development, web technologies and mobile application development. I enjoy learning new technologies and using programming to develop practical solutions.</p>
+        <p>I am continuously improving my technical skills through hands-on projects and personal learning.</p>
+        <p><strong>My goal:</strong> to grow into a capable software developer who builds useful websites and apps for real people and businesses.</p>
+      </div>
+      <div class="info rv">
+        <div class="glass info-card"><svg class="ico"><use href="#i-pin"/></svg><div><h3>Location</h3><p>Kisii, Kenya</p></div></div>
+        <div class="glass info-card"><svg class="ico"><use href="#i-grad"/></svg><div><h3>Profession</h3><p>ICT student and aspiring software developer</p></div></div>
+        <div class="glass info-card"><svg class="ico"><use href="#i-tgt"/></svg><div><h3>Technical interests</h3><p>Web technologies, Android apps, databases and UI design</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Technical skills</h2><p>The tools I use in my projects and am still sharpening.</p></div>
+    <div class="grid4" id="skillGrid"></div>
+    <p class="note rv">The bars show my current comfort level while I keep learning. They are not expert ratings.</p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Services</h2><p>Practical help for individuals and small businesses.</p></div>
+    <div class="grid4">
+      <article class="glass svc rv"><div class="ico-b"><svg class="ico"><use href="#i-web"/></svg></div><h3>Website development</h3><ul><li>Personal portfolios</li><li>Business websites</li><li>Responsive websites</li></ul></article>
+      <article class="glass svc rv"><div class="ico-b"><svg class="ico"><use href="#i-and"/></svg></div><h3>Android application development</h3><ul><li>Basic Android applications</li><li>Login interfaces</li><li>Customer feedback applications</li></ul></article>
+      <article class="glass svc rv"><div class="ico-b"><svg class="ico"><use href="#i-db"/></svg></div><h3>Database solutions</h3><ul><li>Database design</li><li>Data management</li><li>Basic database integration</li></ul></article>
+      <article class="glass svc rv"><div class="ico-b"><svg class="ico"><use href="#i-ui"/></svg></div><h3>UI/UX design</h3><ul><li>Website interface design</li><li>Mobile application interface layouts</li><li>Modern visual layouts</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Projects</h2><p>Hands-on work that shows what I have built so far.</p></div>
+    <div class="grid2">
+      <article class="glass proj rv">
+        <div class="proj-vis"><svg class="ico"><use href="#i-calc"/></svg></div>
+        <div class="proj-body"><h3>Student Mean Grade System</h3><p>A JavaScript application that calculates total marks, average scores and grades with input validation.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+      </article>
+      <article class="glass proj rv">
+        <div class="proj-vis"><svg class="ico"><use href="#i-shape"/></svg></div>
+        <div class="proj-body"><h3>Shape Calculator</h3><p>A simple application that calculates the area of different geometric shapes, including triangles, rectangles, circles and squares.</p><div class="tags"><span>JavaScript</span><span>HTML</span><span>CSS</span></div></div>
+      </article>
+      <article class="glass proj rv">
+        <div class="proj-vis"><svg class="ico"><use href="#i-star"/></svg></div>
+        <div class="proj-body"><h3>Customer Feedback Android App</h3><p>An Android application concept that allows customers to submit feedback and ratings.</p><div class="tags"><span>Java</span><span>Android Studio</span></div></div>
+      </article>
+      <article class="glass proj rv">
+        <div class="proj-vis"><svg class="ico"><use href="#i-web"/></svg></div>
+        <div class="proj-body"><h3>Job Rabera Portfolio Website</h3><p>My personal portfolio website showcasing my skills, projects and professional profile.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <a class="btn btn-o" href="https://github.com/raberajob02-stack/official-website" target="_blank" rel="noopener noreferrer"><svg class="ico"><use href="#i-gh"/></svg>View on GitHub</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Education and learning</h2></div>
+    <div class="timeline">
+      <div class="glass tl rv"><h3>ICT studies</h3><p>Currently studying Information and Communication Technology.</p></div>
+      <div class="glass tl rv"><h3>Software development learning</h3><p>Learning through hands-on projects and personal study in web development, Java and Android development, and databases.</p></div>
+      <div class="glass tl rv"><h3>Cisco Networking Academy: HTML and CSS</h3><p>Training in HTML and CSS, the foundation of my web development work.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Contact me</h2><p>Have a project or an opportunity in mind? Send me a message by email or WhatsApp.</p></div>
+    <div class="contact-grid">
+      <div class="glass c-list rv">
+        <div class="c-item"><svg class="ico"><use href="#i-pin"/></svg><div><small>Location</small>Kisii, Kenya</div></div>
+        <div class="c-item"><svg class="ico"><use href="#i-ph"/></svg><div><small>Phone</small><a href="tel:+254703839993">+254703839993</a></div></div>
+        <div class="c-item"><svg class="ico"><use href="#i-ml"/></svg><div><small>Email</small><a href="mailto:raberajob02@gmail.com">raberajob02@gmail.com</a></div></div>
+        <div class="c-item"><svg class="ico"><use href="#i-wa"/></svg><div><small>WhatsApp</small><a href="https://wa.me/254703839993" target="_blank" rel="noopener noreferrer">Chat with me</a></div></div>
+      </div>
+      <form id="form" class="glass rv" novalidate>
+        <div class="f-row">
+          <div><label for="fn">Full name</label><input id="fn" name="name" type="text" autocomplete="name"><span class="err"></span></div>
+          <div><label for="fe">Email address</label><input id="fe" name="email" type="email" autocomplete="email"><span class="err"></span></div>
+        </div>
+        <div><label for="fs">Subject</label><input id="fs" name="subject" type="text"><span class="err"></span></div>
+        <div><label for="fm">Message</label><textarea id="fm" name="message"></textarea><span class="err"></span></div>
+        <div class="f-btns">
+          <button type="button" class="btn btn-p" data-via="mail"><svg class="ico"><use href="#i-ml"/></svg>Send by email</button>
+          <button type="button" class="btn btn-o" data-via="wa"><svg class="ico"><use href="#i-wa"/></svg>Send on WhatsApp</button>
+        </div>
+        <div class="status" id="status" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
-  <p>© 2026 Job Rabera. All Rights Reserved. | Built with ❤️ in Kenya</p>
-  <p style="margin-top:8px; font-size:13px;">
-    <a href="https://wa.me/254703839993" style="color:#FFC107;">WhatsApp</a> |
-    <a href="https://www.instagram.com/kimme4622?obrf=aDB3OGtncmh4dmpi&utm_source=qr" style="color:#FFC107;">Instagram</a> |
-    <a href="https://www.tiktok.com/@kimme0602?_r=1&_t=ZS-9BJZyIDuOHw" style="color:#FFC107;">TikTok</a> |
-    <a href="https://www.facebook.com/share/18dB2dWQU7/?mibextid=wwXIfr" style="color:#FFC107;">Facebook</a> |
-    <a href="https://github.com/raberajob02-stack" style="color:#FFC107;">GitHub</a> |
-    <a href="https://youtube.com/@rabera-uw5th?si=4oF0HaVMJcuxBZtB" style="color:#FFC107;">YouTube</a>
-  </p>
+  <div class="wrap">
+    <div class="f-grid">
+      <div><a href="#home" class="brand">JOB <span>RABERA</span></a><p>ICT student and aspiring software developer in Kisii, Kenya, building websites, Android apps and practical digital solutions.</p></div>
+      <div><h4>Quick links</h4><ul><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Follow me</h4><ul>
+        <li><a href="https://wa.me/254703839993" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/kimme4622?obrf=aDB3OGtncmh4dmpi&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://github.com/raberajob02-stack" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.tiktok.com/@kimme0602?_r=1&_t=ZS-9BJZyIDuOHw" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+        <li><a href="https://www.facebook.com/share/18dB2dWQU7/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://youtube.com/@rabera-uw5th?si=4oF0HaVMJcuxBZtB" target="_blank" rel="noopener noreferrer">YouTube</a></li></ul></div>
+    </div>
+    <div class="copy"><span>&copy; 2026 Job Rabera. All rights reserved.</span><span>Built in Kisii, Kenya</span></div>
+  </div>
 </footer>
 
-<script src="script.js"></script>
+<button class="top" id="top" aria-label="Back to top"><svg class="ico"><use href="#i-up"/></svg></button>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Skills (levels reflect current learning stage, not expert ability) */
+  var skills = [
+    {t:'Web development',i:'i-web',s:[['HTML5',80,'Comfortable'],['CSS3',75,'Comfortable'],['JavaScript',65,'Building skills'],['Responsive web design',70,'Comfortable']]},
+    {t:'Mobile development',i:'i-and',s:[['Java',60,'Building skills'],['Android Studio',60,'Building skills'],['Android XML layouts',60,'Building skills']]},
+    {t:'Databases',i:'i-db',s:[['MySQL',55,'Learning'],['Firebase',50,'Learning']]},
+    {t:'Tools',i:'i-tool',s:[['Visual Studio Code',80,'Comfortable'],['Git',60,'Building skills'],['GitHub',60,'Building skills'],['Canva',75,'Comfortable']]}
+  ];
+  var grid = document.getElementById('skillGrid');
+  skills.forEach(function(g){
+    var c = document.createElement('article');
+    c.className = 'glass skill-card rv';
+    var h = '<h3><svg class="ico"><use href="#'+g.i+'"/></svg>'+g.t+'</h3>';
+    g.s.forEach(function(k){
+      h += '<div class="sk"><div class="sk-top"><span>'+k[0]+'</span><span>'+k[2]+'</span></div><div class="bar" role="progressbar" aria-label="'+k[0]+' comfort level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+k[1]+'"><i data-w="'+k[1]+'"></i></div></div>';
+    });
+    c.innerHTML = h;
+    grid.appendChild(c);
+  });
+
+  /* Mobile menu */
+  var burger = document.getElementById('burger'), menu = document.getElementById('menu');
+  function closeMenu(){ menu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+  burger.addEventListener('click', function(){
+    var o = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', o);
+  });
+  menu.addEventListener('click', function(e){ if(e.target.tagName==='A') closeMenu(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+
+  /* Scroll reveal + skill bars */
+  var rvs = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          e.target.querySelectorAll('.bar i').forEach(function(b){ b.style.width = b.dataset.w+'%'; });
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold:.15});
+    rvs.forEach(function(el){ io.observe(el); });
+  } else {
+    rvs.forEach(function(el){ el.classList.add('in'); });
+    document.querySelectorAll('.bar i').forEach(function(b){ b.style.width = b.dataset.w+'%'; });
+  }
+
+  /* Active nav highlighting */
+  var links = menu.querySelectorAll('a');
+  var secs = Array.prototype.map.call(links, function(a){ return document.querySelector(a.getAttribute('href')); });
+  function onScroll(){
+    var y = window.scrollY + 120, cur = 0;
+    secs.forEach(function(s,i){ if(s && s.offsetTop <= y) cur = i; });
+    if(window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) cur = secs.length - 1;
+    links.forEach(function(a,i){ a.classList.toggle('active', i===cur); });
+    top.classList.toggle('show', window.scrollY > 500);
+  }
+  var top = document.getElementById('top');
+  top.addEventListener('click', function(){ window.scrollTo({top:0, behavior: reduce?'auto':'smooth'}); });
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* Typing effect */
+  var el = document.getElementById('typed');
+  var roles = ['ICT Student','Web Developer','Aspiring Software Developer','Android App Builder'];
+  if(reduce){ el.textContent = roles[0]; }
+  else {
+    var r = 0, c = 0, del = false;
+    (function tick(){
+      var w = roles[r];
+      el.textContent = w.slice(0, c);
+      if(!del && c === w.length){ del = true; return setTimeout(tick, 1400); }
+      if(del && c === 0){ del = false; r = (r+1) % roles.length; }
+      c += del ? -1 : 1;
+      setTimeout(tick, del ? 45 : 85);
+    })();
+  }
+
+  /* Contact form: validated mailto / WhatsApp workflow (no backend) */
+  var form = document.getElementById('form'), status = document.getElementById('status');
+  var f = {name:document.getElementById('fn'), email:document.getElementById('fe'), subject:document.getElementById('fs'), message:document.getElementById('fm')};
+  function setErr(inp, msg){
+    inp.classList.toggle('invalid', !!msg);
+    inp.setAttribute('aria-invalid', !!msg);
+    inp.parentNode.querySelector('.err').textContent = msg || '';
+  }
+  function validate(){
+    var ok = true, v = function(k){ return f[k].value.trim(); };
+    if(v('name').length < 2){ setErr(f.name,'Enter your full name.'); ok=false; } else setErr(f.name);
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v('email'))){ setErr(f.email,'Enter a valid email address.'); ok=false; } else setErr(f.email);
+    if(v('subject').length < 3){ setErr(f.subject,'Enter a subject (at least 3 characters).'); ok=false; } else setErr(f.subject);
+    if(v('message').length < 10){ setErr(f.message,'Write a message of at least 10 characters.'); ok=false; } else setErr(f.message);
+    return ok;
+  }
+  form.addEventListener('submit', function(e){ e.preventDefault(); });
+  form.querySelectorAll('[data-via]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if(!validate()){
+        status.className = 'status bad';
+        status.textContent = 'Please fix the highlighted fields and try again.';
+        return;
+      }
+      var n = f.name.value.trim(), em = f.email.value.trim(), s = f.subject.value.trim(), m = f.message.value.trim();
+      var body = m + '\n\nFrom: ' + n + '\nEmail: ' + em;
+      var url = b.dataset.via === 'mail'
+        ? 'mailto:raberajob02@gmail.com?subject=' + encodeURIComponent(s) + '&body=' + encodeURIComponent(body)
+        : 'https://wa.me/254703839993?text=' + encodeURIComponent('*' + s + '*\n\n' + body);
+      status.className = 'status ok';
+      status.textContent = b.dataset.via === 'mail'
+        ? 'Your email app is opening with your message ready. Press send there to deliver it.'
+        : 'WhatsApp is opening with your message ready. Press send there to deliver it.';
+      if(b.dataset.via === 'mail') window.location.href = url; else window.open(url, '_blank', 'noopener');
+    });
+  });
+  form.addEventListener('input', function(e){ if(e.target.classList.contains('invalid')) setErr(e.target); });
+})();
+</script>
 </body>
 </html>
